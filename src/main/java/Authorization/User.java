@@ -3,19 +3,19 @@ package Authorization;
 import java.util.Objects;
 
 public class User {
-    private String name;
+    private String user;
     private String password;
 
     public User() {
     }
 
-    public User(String name, String password) {
-        this.name = name;
+    public User(String user, String password) {
+        this.user = user;
         this.password = password;
     }
 
-    public String getName() {
-        return name;
+    public String getUser() {
+        return user;
     }
 
     public String getPassword() {
@@ -27,18 +27,18 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(name, user.name) && Objects.equals(password, user.password);
+        return Objects.equals(this.user, user.user) && Objects.equals(password, user.password);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, password);
+        return Objects.hash(user, password);
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
+                "name='" + user + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }

@@ -1,9 +1,7 @@
 package Controller;
 
 import Authorization.Authorities;
-import Exepction.InvalidCredentials;
 import Service.AuthorizationService;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

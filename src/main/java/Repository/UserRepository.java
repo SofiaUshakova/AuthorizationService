@@ -8,6 +8,17 @@ import java.util.*;
 
 @Repository
 public class UserRepository {
+    private List<User>userList = new ArrayList<>();
+    private UserRepository(){
+        userList = addUserList();
+    }
+    private List<User> addUserList(){
+        userList.add(new User("admin", "0000"));
+        userList.add(new User("Sonya", "1234"));
+        return userList;
+    }
+
+
     public List<Authorities> getUserAuthorities(String user, String password) {
         List<Authorities> authoritiesList = new ArrayList<>();
         if (user.equals("admin") && password.equals("0000")){
