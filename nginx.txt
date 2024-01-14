@@ -41,8 +41,8 @@ http {
         #access_log  logs/host.access.log  main;
 
         location / {
-            root   html;
-            index  index.html index.htm;
+            proxy_pass http://localhost:8080;
+            
         }
         
         location /signin {
